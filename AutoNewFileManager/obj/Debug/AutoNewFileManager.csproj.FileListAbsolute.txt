@@ -1,0 +1,10 @@
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\bin\Debug\AutoNewFileManager.exe.config
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\bin\Debug\AutoNewFileManager.exe
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\bin\Debug\AutoNewFileManager.pdb
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\obj\Debug\AutoNewFileManager.csproj.AssemblyReference.cache
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\obj\Debug\AutoNewFileManager.Form1.resources
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\obj\Debug\AutoNewFileManager.Properties.Resources.resources
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\obj\Debug\AutoNewFileManager.csproj.GenerateResource.cache
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\obj\Debug\AutoNewFileManager.csproj.CoreCompileInputs.cache
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\obj\Debug\AutoNewFileManager.exe
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\obj\Debug\AutoNewFileManager.pdb

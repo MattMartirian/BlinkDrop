@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoNewFileManager", "AutoNewFileManager\AutoNewFileManager.csproj", "{53DA94D3-6DE5-41D9-B932-33308DB4FCCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoNewFileManagerClient", "AutoNewFileManagerClient\AutoNewFileManagerClient.csproj", "{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53DA94D3-6DE5-41D9-B932-33308DB4FCCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53DA94D3-6DE5-41D9-B932-33308DB4FCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53DA94D3-6DE5-41D9-B932-33308DB4FCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53DA94D3-6DE5-41D9-B932-33308DB4FCCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9AA0076D-71F7-4B7C-A22F-35BA6D136C79}
+	EndGlobalSection
+EndGlobal

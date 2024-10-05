@@ -1,0 +1,14 @@
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\bin\Debug\AutoNewFileManagerClient.exe.config
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\bin\Debug\AutoNewFileManagerClient.exe
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\bin\Debug\AutoNewFileManagerClient.pdb
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.csproj.AssemblyReference.cache
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.Form1.resources
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.Properties.Resources.resources
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.csproj.GenerateResource.cache
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.csproj.CoreCompileInputs.cache
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.exe
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.pdb
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\bin\Debug\Newtonsoft.Json.xml
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\obj\Debug\AutoNewF.1BDB0B3E.Up2Date
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.csproj.Fody.CopyLocal.cache
