@@ -13,7 +13,7 @@ namespace AutoNewFileManager
     {
         public static event Action<string> OnMessage;
         private static string directoryPath = @"D:\CompartirArchivos"; // Ruta de la carpeta compartida
-        private static int port = 61116;  // Puerto en el que el servidor escucha
+        private static int port = 8080;  // Puerto en el que el servidor escucha
 
 
         public static async Task StartServerAsync(string FolderToUpload)
@@ -35,55 +35,64 @@ namespace AutoNewFileManager
             }
         }
 
-        private static async Task HandleClient(TcpClient client, string Folder)
+        private static async Task HandleClient(TcpClient client, string folder)
         {
             OnMessage?.Invoke("HandleClient ha sido llamado.");
             using (client)
             {
                 NetworkStream stream = client.GetStream();
-                string[] files = Directory.GetFiles(Folder);
 
-                // 1. Calcular el peso total de los archivos
-                long totalSize = files.Sum(filePath => new FileInfo(filePath).Length);
+                // Obtener todas las entradas de directorio recursivamente
+                IEnumerable<string> entries = Directory.EnumerateFileSystemEntries(folder, "*", SearchOption.AllDirectories);
 
-                // 2. Enviar el tamaño total al cliente
-                byte[] totalSizeBytes = BitConverter.GetBytes(totalSize);
-                await stream.WriteAsync(totalSizeBytes, 0, totalSizeBytes.Length);
+                // Enviar el número total de entradas (archivos + carpetas)
+                int totalEntries = entries.Count();
+                byte[] totalEntriesBytes = BitConverter.GetBytes(totalEntries);
+                await stream.WriteAsync(totalEntriesBytes, 0, totalEntriesBytes.Length);
 
-                // 3. Enviar cada archivo al cliente
-                foreach (string filePath in files)
+                foreach (string entry in entries)
                 {
-                    FileInfo fileInfo = new FileInfo(filePath);
-                    OnMessage?.Invoke($"Enviando archivo: {fileInfo.Name}");
+                    FileInfo fileInfo = new FileInfo(entry);
+                    bool isDirectory = Directory.Exists(entry);
 
-                    // 1. Enviar el nombre del archivo
-                    byte[] fileNameBytes = Encoding.UTF8.GetBytes(fileInfo.Name);
-                    byte[] fileNameLengthBytes = BitConverter.GetBytes(fileNameBytes.Length);
-                    await stream.WriteAsync(fileNameLengthBytes, 0, fileNameLengthBytes.Length);
-                    await stream.WriteAsync(fileNameBytes, 0, fileNameBytes.Length);
+                    // Enviar si es una carpeta o un archivo
+                    byte[] isDirectoryBytes = BitConverter.GetBytes(isDirectory);
+                    await stream.WriteAsync(isDirectoryBytes, 0, isDirectoryBytes.Length);
 
-                    // 2. Enviar el contenido del archivo por fragmentos
-                    byte[] fileLengthBytes = BitConverter.GetBytes(fileInfo.Length);
-                    await stream.WriteAsync(fileLengthBytes, 0, fileLengthBytes.Length);
+                    // Enviar el nombre relativo (desde la raíz de la carpeta original)
+                    string relativePath = GetRelativePath(folder, entry);
+                    byte[] relativePathBytes = Encoding.UTF8.GetBytes(relativePath);
+                    byte[] relativePathLengthBytes = BitConverter.GetBytes(relativePathBytes.Length);
+                    await stream.WriteAsync(relativePathLengthBytes, 0, relativePathLengthBytes.Length);
+                    await stream.WriteAsync(relativePathBytes, 0, relativePathBytes.Length);
 
-                    // Leer el archivo en fragmentos y enviarlo
-                    byte[] buffer = new byte[4096]; // Tamaño del buffer
-                    using (FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                    if (!isDirectory) // Si es un archivo, enviar el contenido
                     {
-                        int bytesRead;
-                        while ((bytesRead = await fileStream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+                        byte[] fileLengthBytes = BitConverter.GetBytes(fileInfo.Length);
+                        await stream.WriteAsync(fileLengthBytes, 0, fileLengthBytes.Length);
+
+                        byte[] buffer = new byte[4096];
+                        using (FileStream fileStream = new FileStream(entry, FileMode.Open, FileAccess.Read))
                         {
-                            await stream.WriteAsync(buffer, 0, bytesRead);
+                            int bytesRead;
+                            while ((bytesRead = await fileStream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+                            {
+                                await stream.WriteAsync(buffer, 0, bytesRead);
+                            }
                         }
                     }
                 }
 
-                OnMessage?.Invoke("Todos los archivos han sido enviados.");
-                string endMessage = "FIN";
-                byte[] endMessageBytes = Encoding.UTF8.GetBytes(endMessage);
-                await stream.WriteAsync(BitConverter.GetBytes(endMessageBytes.Length), 0, sizeof(int));
-                await stream.WriteAsync(endMessageBytes, 0, endMessageBytes.Length);
+                OnMessage?.Invoke("Todos los archivos y carpetas han sido enviados.");
             }
         }
+
+        public static string GetRelativePath(string basePath, string fullPath)
+        {
+            Uri baseUri = new Uri(basePath.EndsWith(Path.DirectorySeparatorChar.ToString()) ? basePath : basePath + Path.DirectorySeparatorChar);
+            Uri fullUri = new Uri(fullPath);
+            return Uri.UnescapeDataString(baseUri.MakeRelativeUri(fullUri).ToString()).Replace('/', Path.DirectorySeparatorChar);
+        }
+
     }
 }

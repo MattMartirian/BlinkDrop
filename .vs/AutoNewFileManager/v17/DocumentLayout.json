@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "Z:\\Code\\Projects\\AutoNewFileManager\\",
+  "WorkspaceRootPath": "E:\\Git\\BlinkDrop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}|AutoNewFileManagerClient\\AutoNewFileManagerClient.csproj|z:\\code\\projects\\autonewfilemanager\\autonewfilemanagerclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}|AutoNewFileManagerClient\\AutoNewFileManagerClient.csproj|solutionrelative:autonewfilemanagerclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32198643-C671-4BC6-A09E-D4330C49B29B}|Elementos de la soluci\u00F3n{32198643-C671-4BC6-A09E-D4330C49B29B}|E:\\Git\\BlinkDrop\\CodigoOriginal.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{32198643-C671-4BC6-A09E-D4330C49B29B}|Elementos de la soluci\u00F3n{32198643-C671-4BC6-A09E-D4330C49B29B}|solutionrelative:CodigoOriginal.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}|AutoNewFileManagerClient\\AutoNewFileManagerClient.csproj|Z:\\Code\\Projects\\AutoNewFileManager\\autonewfilemanagerclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}|AutoNewFileManagerClient\\AutoNewFileManagerClient.csproj|solutionrelative:autonewfilemanagerclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}|AutoNewFileManagerClient\\AutoNewFileManagerClient.csproj|Z:\\Code\\Projects\\AutoNewFileManager\\autonewfilemanagerclient\\fileclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}|AutoNewFileManagerClient\\AutoNewFileManagerClient.csproj|E:\\Git\\BlinkDrop\\autonewfilemanagerclient\\fileclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}|AutoNewFileManagerClient\\AutoNewFileManagerClient.csproj|solutionrelative:autonewfilemanagerclient\\fileclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{53DA94D3-6DE5-41D9-B932-33308DB4FCCE}|AutoNewFileManager\\AutoNewFileManager.csproj|Z:\\Code\\Projects\\AutoNewFileManager\\autonewfilemanager\\fileserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{53DA94D3-6DE5-41D9-B932-33308DB4FCCE}|AutoNewFileManager\\AutoNewFileManager.csproj|E:\\Git\\BlinkDrop\\autonewfilemanager\\fileserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{53DA94D3-6DE5-41D9-B932-33308DB4FCCE}|AutoNewFileManager\\AutoNewFileManager.csproj|solutionrelative:autonewfilemanager\\fileserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}|AutoNewFileManagerClient\\AutoNewFileManagerClient.csproj|e:\\git\\blinkdrop\\autonewfilemanagerclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}|AutoNewFileManagerClient\\AutoNewFileManagerClient.csproj|solutionrelative:autonewfilemanagerclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}|AutoNewFileManagerClient\\AutoNewFileManagerClient.csproj|E:\\Git\\BlinkDrop\\autonewfilemanagerclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}|AutoNewFileManagerClient\\AutoNewFileManagerClient.csproj|solutionrelative:autonewfilemanagerclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,50 +47,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CodigoOriginal.txt",
+              "DocumentMoniker": "E:\\Git\\BlinkDrop\\CodigoOriginal.txt",
+              "RelativeDocumentMoniker": "CodigoOriginal.txt",
+              "ToolTip": "E:\\Git\\BlinkDrop\\CodigoOriginal.txt",
+              "RelativeToolTip": "CodigoOriginal.txt",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAALEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-25T17:27:18.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
-              "DocumentMoniker": "Z:\\Code\\Projects\\AutoNewFileManager\\AutoNewFileManagerClient\\Form1.cs",
+              "DocumentMoniker": "E:\\Git\\BlinkDrop\\AutoNewFileManagerClient\\Form1.cs",
               "RelativeDocumentMoniker": "AutoNewFileManagerClient\\Form1.cs",
-              "ToolTip": "Z:\\Code\\Projects\\AutoNewFileManager\\AutoNewFileManagerClient\\Form1.cs",
+              "ToolTip": "E:\\Git\\BlinkDrop\\AutoNewFileManagerClient\\Form1.cs",
               "RelativeToolTip": "AutoNewFileManagerClient\\Form1.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T00:58:21.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "Z:\\Code\\Projects\\AutoNewFileManager\\AutoNewFileManagerClient\\Form1.cs",
+              "DocumentMoniker": "E:\\Git\\BlinkDrop\\AutoNewFileManagerClient\\Form1.cs",
               "RelativeDocumentMoniker": "AutoNewFileManagerClient\\Form1.cs",
               "ToolTip": "Z:\\Code\\Projects\\AutoNewFileManager\\AutoNewFileManagerClient\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "AutoNewFileManagerClient\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T00:57:58.091Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FileClient.cs",
-              "DocumentMoniker": "Z:\\Code\\Projects\\AutoNewFileManager\\AutoNewFileManagerClient\\FileClient.cs",
+              "DocumentMoniker": "E:\\Git\\BlinkDrop\\AutoNewFileManagerClient\\FileClient.cs",
               "RelativeDocumentMoniker": "AutoNewFileManagerClient\\FileClient.cs",
-              "ToolTip": "Z:\\Code\\Projects\\AutoNewFileManager\\AutoNewFileManagerClient\\FileClient.cs",
+              "ToolTip": "E:\\Git\\BlinkDrop\\AutoNewFileManagerClient\\FileClient.cs",
               "RelativeToolTip": "AutoNewFileManagerClient\\FileClient.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA8wFkAAABSAAAAAAAAAA==",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAYwFsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T00:47:05.494Z"
+              "WhenOpened": "2024-10-05T00:47:05.494Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FileServer.cs",
-              "DocumentMoniker": "Z:\\Code\\Projects\\AutoNewFileManager\\AutoNewFileManager\\FileServer.cs",
+              "DocumentMoniker": "E:\\Git\\BlinkDrop\\AutoNewFileManager\\FileServer.cs",
               "RelativeDocumentMoniker": "AutoNewFileManager\\FileServer.cs",
-              "ToolTip": "Z:\\Code\\Projects\\AutoNewFileManager\\AutoNewFileManager\\FileServer.cs",
+              "ToolTip": "E:\\Git\\BlinkDrop\\AutoNewFileManager\\FileServer.cs",
               "RelativeToolTip": "AutoNewFileManager\\FileServer.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "ViewState": "AQIAADUAAAAAAAAAAAAAAD4AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T00:46:00.184Z"
+              "WhenOpened": "2024-10-05T00:46:00.184Z",
+              "EditorCaption": ""
             }
           ]
         }

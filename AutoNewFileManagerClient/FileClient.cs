@@ -11,7 +11,7 @@ namespace AutoNewFileManagerClient
 {
     public class FileClient
     {
-        private static int port = 61116;
+        private static int port = 8080;
         public static event Action<string> OnMessage;
         public static event Action<bool> AlternateBlocking;
         public static event Action<long> OnProgressChanged; // Nuevo evento para informar del progreso
@@ -41,56 +41,57 @@ namespace AutoNewFileManagerClient
                         while (true)
                         {
                             AlternateBlocking?.Invoke(true);
-                            // 1. Leer la longitud del nombre del archivo
-                            byte[] fileNameLengthBytes = new byte[sizeof(int)];
-                            int bytesRead = await stream.ReadAsync(fileNameLengthBytes, 0, fileNameLengthBytes.Length);
-                            if (bytesRead == 0) break; // No hay más archivos
 
-                            int fileNameLength = BitConverter.ToInt32(fileNameLengthBytes, 0);
+                            // Leer si es carpeta o archivo
+                            byte[] isDirectoryBytes = new byte[sizeof(bool)];
+                            int bytesRead = await stream.ReadAsync(isDirectoryBytes, 0, isDirectoryBytes.Length);
+                            if (bytesRead == 0) break;
+                            bool isDirectory = BitConverter.ToBoolean(isDirectoryBytes, 0);
 
-                            // 2. Leer el nombre del archivo
-                            byte[] fileNameBytes = new byte[fileNameLength];
-                            await stream.ReadAsync(fileNameBytes, 0, fileNameLength);
-                            string fileName = Encoding.UTF8.GetString(fileNameBytes);
+                            // Leer la longitud del nombre relativo
+                            byte[] relativePathLengthBytes = new byte[sizeof(int)];
+                            await stream.ReadAsync(relativePathLengthBytes, 0, relativePathLengthBytes.Length);
+                            int relativePathLength = BitConverter.ToInt32(relativePathLengthBytes, 0);
 
+                            // Leer el nombre relativo
+                            byte[] relativePathBytes = new byte[relativePathLength];
+                            await stream.ReadAsync(relativePathBytes, 0, relativePathLength);
+                            string relativePath = Encoding.UTF8.GetString(relativePathBytes);
 
-                            OnMessage?.Invoke($"Descargando {fileName}...");
-
-                            // Si el nombre del archivo es "FIN", terminamos
-                            if (fileName == "FIN")
+                            // Si es carpeta, crearla
+                            string fullPath = Path.Combine(selectedFolder, relativePath);
+                            if (isDirectory)
                             {
-                                OnMessage?.Invoke($"Transferencia completa! Conexión cerrada.");
-                                AlternateBlocking?.Invoke(false);
-                                break;
+                                Directory.CreateDirectory(fullPath);
+                                OnMessage?.Invoke($"Carpeta creada: {relativePath}");
                             }
-
-                            // 3. Leer la longitud del archivo
-                            byte[] fileLengthBytes = new byte[sizeof(long)];
-                            await stream.ReadAsync(fileLengthBytes, 0, fileLengthBytes.Length);
-                            long fileLength = BitConverter.ToInt64(fileLengthBytes, 0);
-
-                            // 4. Leer el contenido del archivo por fragmentos
-                            string fullPath = Path.Combine(selectedFolder, fileName);
-                            byte[] buffer = new byte[65536]; // Tamaño del buffer
-
-                            using (FileStream fileStream = new FileStream(fullPath, FileMode.Create, FileAccess.Write, FileShare.None, buffer.Length, useAsync: true))
+                            else // Si es archivo, leer su contenido
                             {
-                                long totalBytesRead = 0;
-                                while (totalBytesRead < fileLength)
+                                // Leer el tamaño del archivo
+                                byte[] fileLengthBytes = new byte[sizeof(long)];
+                                await stream.ReadAsync(fileLengthBytes, 0, fileLengthBytes.Length);
+                                long fileLength = BitConverter.ToInt64(fileLengthBytes, 0);
+
+                                // Leer el contenido del archivo en fragmentos
+                                byte[] buffer = new byte[65536];
+                                using (FileStream fileStream = new FileStream(fullPath, FileMode.Create, FileAccess.Write))
                                 {
-                                    int toRead = (int)Math.Min(buffer.Length, fileLength - totalBytesRead);
-                                    int fragmentBytesRead = await stream.ReadAsync(buffer, 0, toRead);
-                                    if (fragmentBytesRead == 0) break;
+                                    long totalBytesRead = 0;
+                                    while (totalBytesRead < fileLength)
+                                    {
+                                        int toRead = (int)Math.Min(buffer.Length, fileLength - totalBytesRead);
+                                        int fragmentBytesRead = await stream.ReadAsync(buffer, 0, toRead);
+                                        if (fragmentBytesRead == 0) break;
 
-                                    await fileStream.WriteAsync(buffer, 0, fragmentBytesRead);
-                                    totalBytesRead += fragmentBytesRead;
-                                    totalBytesReceived += fragmentBytesRead;
-
-                                    // Emitir el progreso
-                                    OnProgressChanged?.Invoke(totalBytesReceived);
+                                        await fileStream.WriteAsync(buffer, 0, fragmentBytesRead);
+                                        totalBytesRead += fragmentBytesRead;
+                                    }
                                 }
+
+                                OnMessage?.Invoke($"Archivo descargado: {relativePath}");
                             }
                         }
+
                     }
                 }
                 catch (Exception ex)

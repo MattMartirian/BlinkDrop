@@ -8,3 +8,13 @@ Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\obj\Debug\AutoNewFileMana
 Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\obj\Debug\AutoNewFileManager.csproj.CoreCompileInputs.cache
 Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\obj\Debug\AutoNewFileManager.exe
 Z:\Code\Projects\AutoNewFileManager\AutoNewFileManager\obj\Debug\AutoNewFileManager.pdb
+E:\Git\BlinkDrop\AutoNewFileManager\bin\Debug\AutoNewFileManager.exe.config
+E:\Git\BlinkDrop\AutoNewFileManager\bin\Debug\AutoNewFileManager.exe
+E:\Git\BlinkDrop\AutoNewFileManager\bin\Debug\AutoNewFileManager.pdb
+E:\Git\BlinkDrop\AutoNewFileManager\obj\Debug\AutoNewFileManager.csproj.AssemblyReference.cache
+E:\Git\BlinkDrop\AutoNewFileManager\obj\Debug\AutoNewFileManager.Form1.resources
+E:\Git\BlinkDrop\AutoNewFileManager\obj\Debug\AutoNewFileManager.Properties.Resources.resources
+E:\Git\BlinkDrop\AutoNewFileManager\obj\Debug\AutoNewFileManager.csproj.GenerateResource.cache
+E:\Git\BlinkDrop\AutoNewFileManager\obj\Debug\AutoNewFileManager.csproj.CoreCompileInputs.cache
+E:\Git\BlinkDrop\AutoNewFileManager\obj\Debug\AutoNewFileManager.exe
+E:\Git\BlinkDrop\AutoNewFileManager\obj\Debug\AutoNewFileManager.pdb

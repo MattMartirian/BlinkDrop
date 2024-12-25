@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoNewFileManager", "AutoN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoNewFileManagerClient", "AutoNewFileManagerClient\AutoNewFileManagerClient.csproj", "{4775B6DD-D386-4AF6-8C7F-9CA12685CE48}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{32198643-C671-4BC6-A09E-D4330C49B29B}"
+	ProjectSection(SolutionItems) = preProject
+		CodigoOriginal.txt = CodigoOriginal.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

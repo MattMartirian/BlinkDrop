@@ -12,3 +12,17 @@ Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\bin\Debug\Newtonsof
 Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\obj\Debug\AutoNewF.1BDB0B3E.Up2Date
 Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 Z:\Code\Projects\AutoNewFileManager\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.csproj.Fody.CopyLocal.cache
+E:\Git\BlinkDrop\AutoNewFileManagerClient\bin\Debug\AutoNewFileManagerClient.exe.config
+E:\Git\BlinkDrop\AutoNewFileManagerClient\bin\Debug\AutoNewFileManagerClient.exe
+E:\Git\BlinkDrop\AutoNewFileManagerClient\bin\Debug\AutoNewFileManagerClient.pdb
+E:\Git\BlinkDrop\AutoNewFileManagerClient\bin\Debug\Newtonsoft.Json.xml
+E:\Git\BlinkDrop\AutoNewFileManagerClient\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\Git\BlinkDrop\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.csproj.AssemblyReference.cache
+E:\Git\BlinkDrop\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.Form1.resources
+E:\Git\BlinkDrop\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.Properties.Resources.resources
+E:\Git\BlinkDrop\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.csproj.GenerateResource.cache
+E:\Git\BlinkDrop\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.csproj.CoreCompileInputs.cache
+E:\Git\BlinkDrop\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.csproj.Fody.CopyLocal.cache
+E:\Git\BlinkDrop\AutoNewFileManagerClient\obj\Debug\AutoNewF.1BDB0B3E.Up2Date
+E:\Git\BlinkDrop\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.exe
+E:\Git\BlinkDrop\AutoNewFileManagerClient\obj\Debug\AutoNewFileManagerClient.pdb
